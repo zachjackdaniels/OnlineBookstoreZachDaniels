@@ -29,7 +29,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
                         ClassificationCategory = "Fiction, Classic",
-                        Price = 9.95f
+                        Price = 9.95f,
+                        Pages = 1488
                     },
                     new Book
                     {
@@ -38,7 +39,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
                         ClassificationCategory = "Non-Fiction, Biography",
-                        Price = 14.58f
+                        Price = 14.58f,
+                        Pages = 944
                     },
                     new Book
                     {
@@ -47,7 +49,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
                         ClassificationCategory = "Non-Fiction, Biography",
-                        Price = 21.54f
+                        Price = 21.54f,
+                        Pages = 832
                     },
                     new Book
                     {
@@ -56,7 +59,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
                         ClassificationCategory = "Non-Fiction, Biography",
-                        Price = 11.61f
+                        Price = 11.61f,
+                        Pages = 864
                     },
                     new Book
                     {
@@ -65,7 +69,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
                         ClassificationCategory = "Non-Fiction, Historical",
-                        Price = 13.33f
+                        Price = 13.33f,
+                        Pages = 528
                     },
                     new Book
                     {
@@ -74,7 +79,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
                         ClassificationCategory = "Fiction, Historical Fiction",
-                        Price = 15.95f
+                        Price = 15.95f,
+                        Pages = 288
                     },
                     new Book
                     {
@@ -83,7 +89,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
                         ClassificationCategory = "Non-Fiction, Self-Help",
-                        Price = 14.99f
+                        Price = 14.99f,
+                        Pages = 304
                     },
                     new Book
                     {
@@ -92,7 +99,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
                         ClassificationCategory = "Non-Fiction, Self-Help",
-                        Price = 21.66f
+                        Price = 21.66f,
+                        Pages = 240
                     },
                     new Book
                     {
@@ -101,7 +109,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
                         ClassificationCategory = "Non-Fiction, Business",
-                        Price = 29.16f
+                        Price = 29.16f,
+                        Pages = 400
                     },
                     new Book
                     {
@@ -110,7 +119,38 @@ namespace OnlineBookstoreZachDaniels.Models
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",
                         ClassificationCategory = "Fiction, Thrillers",
-                        Price = 15.03f
+                        Price = 15.03f,
+                        Pages = 642
+                    },
+                    new Book
+                    {
+                        Title = "As a Man Thinketh",
+                        Author = "James Allen",
+                        Publisher = "CreateSpace Independent Publishing Platform",
+                        ISBN = "978-1503055360",
+                        ClassificationCategory = "Motivational, Self Help",
+                        Price = 5.99f,
+                        Pages = 38
+                    },
+                    new Book
+                    {
+                        Title = "Mistborn: The Final Empire",
+                        Author = "Brandon Sanderson",
+                        Publisher = "Tor Teen",
+                        ISBN = "978-0765377135",
+                        ClassificationCategory = "Fantasy, Young-Adult",
+                        Price = 12.56f,
+                        Pages = 672
+                    },
+                    new Book
+                    {
+                        Title = "Don Quixote",
+                        Author = "Miguel De Cervantes",
+                        Publisher = "Ecco",
+                        ISBN = "978-0060934347",
+                        ClassificationCategory = "Classic, Fiction",
+                        Price = 12.56f,
+                        Pages = 992
                     }
 
                     );

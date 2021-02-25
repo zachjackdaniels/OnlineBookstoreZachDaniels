@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineBookstoreZachDaniels.Models;
+using OnlineBookstoreZachDaniels.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,6 +14,7 @@ namespace OnlineBookstoreZachDaniels.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private IBookstoreRepo _repo;
+        public int PageSize = 5;
 
         public HomeController(ILogger<HomeController> logger, IBookstoreRepo repo)
         {
@@ -20,9 +22,21 @@ namespace OnlineBookstoreZachDaniels.Controllers
             _repo = repo;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            return View(_repo.Books);
+            return View(new ProjectListViewModel
+            {
+                Books = _repo.Books
+                .OrderBy(p => p.BookId)
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repo.Books.Count()
+                }
+            });
         }
 
         public IActionResult Privacy()

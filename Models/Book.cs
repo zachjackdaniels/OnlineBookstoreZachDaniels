@@ -23,5 +23,7 @@ namespace OnlineBookstoreZachDaniels.Models
         public string ClassificationCategory { get; set; }
         [Required]
         public float Price { get; set; }
+        [Required]
+        public int Pages { get; set; }
     }
 }
