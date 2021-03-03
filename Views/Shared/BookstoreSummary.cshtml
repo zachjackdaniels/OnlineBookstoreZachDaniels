@@ -1,0 +1,16 @@
+﻿@model Book
+<div class="row mb-4">
+    <div class="col-6 mx-auto">
+        <div class="card border-dark text-dark border-2">
+            <div class="card-header bg-warning">
+                @Model.Classification | @Model.Category
+            </div>
+            <div class="card-body ">
+                <h3 class="card-title">@Model.Title <span class="badge rounded-pill bg-primary pull-right">@Model.Pages pages</span></h3>
+                <h4 class="card-text">@Model.Author - @Model.Publisher</h4>
+                <p class="card-text"><small class="text-muted">@Model.ISBN</small></p>
+            </div>
+            <div class="card-footer bg-transparent">$@Model.Price</div>
+        </div>
+    </div>
+</div>

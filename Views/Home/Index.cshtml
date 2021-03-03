@@ -7,27 +7,13 @@
 <div class="container py-5">
     @foreach (var x in Model.Books)
     {
-        <div class="row mb-4">
-            <div class="col-6 mx-auto">
-                <div class="card border-dark text-dark border-2">
-                    <div class="card-header bg-warning">
-                        @x.ClassificationCategory
-                    </div>
-                    <div class="card-body ">
-                        <h3 class="card-title">@x.Title <span class="badge rounded-pill bg-primary pull-right">@x.Pages pages</span></h3>
-                        <h4 class="card-text">@x.Author - @x.Publisher</h4>
-                        <p class="card-text"><small class="text-muted">@x.ISBN</small></p>
-                    </div>
-                    <div class="card-footer bg-transparent">$@x.Price</div>
-                </div>
-            </div>
-        </div>
+        <partial name="BookstoreSummary" model="x" />
     }
     <hr class="my-4"/>
     <div class="mx-auto text-center">
         <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
              page-class-normal="btn-outline-dark"
-             page-class-selected="btn-warning"
+             page-class-selected="btn-warning" page-url-category="@Model.CurrentBook"
              class="btn-group pull-right m-1"></div>
     </div>
 </div>

@@ -29,7 +29,7 @@ namespace OnlineBookstoreZachDaniels
 
             services.AddDbContext<BookstoreDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:BookstoreConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
             });
 
             services.AddScoped<IBookstoreRepo, EFBookstoreRepo>();
@@ -57,10 +57,23 @@ namespace OnlineBookstoreZachDaniels
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "/P{page}",
                     new { Controller = "Home", action = "Index" });
+
                 endpoints.MapDefaultControllerRoute();
             });
 

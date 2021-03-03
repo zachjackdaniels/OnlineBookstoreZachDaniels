@@ -28,7 +28,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Victor Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        ClassificationCategory = "Fiction, Classic",
+                        Classification = "Fiction",
+                        Category = "Classic",
                         Price = 9.95f,
                         Pages = 1488
                     },
@@ -38,7 +39,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Doris Kearns Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
-                        ClassificationCategory = "Non-Fiction, Biography",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 14.58f,
                         Pages = 944
                     },
@@ -48,7 +50,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Alice Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
-                        ClassificationCategory = "Non-Fiction, Biography",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 21.54f,
                         Pages = 832
                     },
@@ -58,7 +61,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Ronald C. White",
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
-                        ClassificationCategory = "Non-Fiction, Biography",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 11.61f,
                         Pages = 864
                     },
@@ -68,7 +72,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Laura Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
-                        ClassificationCategory = "Non-Fiction, Historical",
+                        Classification = "Non-Fiction",
+                        Category = "Historical",
                         Price = 13.33f,
                         Pages = 528
                     },
@@ -78,7 +83,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Michael Crichton",
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
-                        ClassificationCategory = "Fiction, Historical Fiction",
+                        Classification = "Fiction",
+                        Category = "Historical Fiction",
                         Price = 15.95f,
                         Pages = 288
                     },
@@ -88,7 +94,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Cal Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
-                        ClassificationCategory = "Non-Fiction, Self-Help",
+                        Classification = "Non-Fiction",
+                        Category = "Self-Help",
                         Price = 14.99f,
                         Pages = 304
                     },
@@ -98,7 +105,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Michael Abrashoff",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
-                        ClassificationCategory = "Non-Fiction, Self-Help",
+                        Classification = "Non-Fiction",
+                        Category = "Self-Help",
                         Price = 21.66f,
                         Pages = 240
                     },
@@ -108,7 +116,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Richard Branson",
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
-                        ClassificationCategory = "Non-Fiction, Business",
+                        Classification = "Non-Fiction",
+                        Category = "Business",
                         Price = 29.16f,
                         Pages = 400
                     },
@@ -118,7 +127,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "John Grisham",
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",
-                        ClassificationCategory = "Fiction, Thrillers",
+                        Classification = "Fiction",
+                        Category = "Thrillers",
                         Price = 15.03f,
                         Pages = 642
                     },
@@ -128,7 +138,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "James Allen",
                         Publisher = "CreateSpace Independent Publishing Platform",
                         ISBN = "978-1503055360",
-                        ClassificationCategory = "Motivational, Self Help",
+                        Classification = "Motivational",
+                        Category = "Self-Help",
                         Price = 5.99f,
                         Pages = 38
                     },
@@ -138,7 +149,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Brandon Sanderson",
                         Publisher = "Tor Teen",
                         ISBN = "978-0765377135",
-                        ClassificationCategory = "Fantasy, Young-Adult",
+                        Classification = "Fantasy",
+                        Category = "Young-Adult",
                         Price = 12.56f,
                         Pages = 672
                     },
@@ -148,7 +160,8 @@ namespace OnlineBookstoreZachDaniels.Models
                         Author = "Miguel De Cervantes",
                         Publisher = "Ecco",
                         ISBN = "978-0060934347",
-                        ClassificationCategory = "Classic, Fiction",
+                        Classification = "Classic",
+                        Category = "Fiction",
                         Price = 12.56f,
                         Pages = 992
                     }

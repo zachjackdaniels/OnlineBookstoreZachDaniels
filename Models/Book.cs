@@ -20,7 +20,8 @@ namespace OnlineBookstoreZachDaniels.Models
         [RegularExpression(@"^\d{3}([-])\d{10}$")]
         public string ISBN { get; set; }
         [Required]
-        public string ClassificationCategory { get; set; }
+        public string Classification { get; set; }
+        public string Category { get; set; }
         [Required]
         public float Price { get; set; }
         [Required]

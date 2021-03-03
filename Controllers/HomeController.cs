@@ -22,11 +22,12 @@ namespace OnlineBookstoreZachDaniels.Controllers
             _repo = repo;
         }
 
-        public IActionResult Index(int page = 1)
+        public IActionResult Index(string category, int page = 1)
         {
             return View(new ProjectListViewModel
             {
                 Books = _repo.Books
+                .Where(p => category == null || p.Category == category)
                 .OrderBy(p => p.BookId)
                 .Skip((page - 1) * PageSize)
                 .Take(PageSize),
@@ -34,9 +35,11 @@ namespace OnlineBookstoreZachDaniels.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalNumItems = _repo.Books.Count()
-                }
-            });
+                    TotalNumItems = category == null ? _repo.Books.Count() :
+                        _repo.Books.Where(x => x.Category == category).Count()
+                },
+                CurrentBook = category
+            }); ;
         }
 
         public IActionResult Privacy()
