@@ -22,18 +22,18 @@ namespace OnlineBookstoreZachDaniels.Controllers
             _repo = repo;
         }
 
-        public IActionResult Index(string category, int page = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             return View(new ProjectListViewModel
             {
                 Books = _repo.Books
                 .Where(p => category == null || p.Category == category)
                 .OrderBy(p => p.BookId)
-                .Skip((page - 1) * PageSize)
+                .Skip((pageNum - 1) * PageSize)
                 .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
                     TotalNumItems = category == null ? _repo.Books.Count() :
                         _repo.Books.Where(x => x.Category == category).Count()

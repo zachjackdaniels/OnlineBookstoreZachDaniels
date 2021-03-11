@@ -1,0 +1,53 @@
+﻿@page
+@model OnlineBookstoreZachDaniels.Pages.CartModel
+@{
+}
+
+<h2>Your Cart</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-left">@line.Book.Title</td>
+                <td class="text-center">@line.Quantity</td>
+                <td class="text-right">@line.Book.Price</td>
+                <td class="text-right">@((line.Quantity * line.Book.Price).ToString("c", System.Globalization.CultureInfo.GetCultureInfo("en-us")))</td>
+                <td>
+                    <form asp-page-handler="Delete" method="post">
+                        <input type="hidden" name="bookId" value="@line.Book.BookId" />
+                        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Remove @line.Book.BookId" />
+                    </form>
+                    @*@using (Html.BeginForm("OnDelete", "Cart"))
+                    {
+                        <input type="hidden" asp-for="@line.Book.BookId" />
+                        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Remove" />
+                    }*@
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right"> @Model.Cart.ReturnTotal().ToString("c", System.Globalization.CultureInfo.GetCultureInfo("en-us"))</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+</div>

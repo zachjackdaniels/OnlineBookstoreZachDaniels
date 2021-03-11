@@ -6,11 +6,15 @@
     <title>@ViewData["Title"] - OnlineBookstoreZachDaniels</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <span class="navbar-brand mb-2 ml-2 h1">Zach's Bookstore</span>
+            <div class="col-6 text-right">
+                <vc:cart-summary />
+            </div>
         </div>
     </nav>
     <div class="container">
